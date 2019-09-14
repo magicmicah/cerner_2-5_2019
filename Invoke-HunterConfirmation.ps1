@@ -10,5 +10,8 @@ function Invoke-HunterConfirmation {
   $resp = Invoke-RestMethod -Uri $url -Method Put -Body $tokenToJson -ContentType 'application/json'
   Write-Output $resp
 }
-
-Invoke-HunterConfirmation -token $Args[0]
+if ($null -eq $Args[0]) {
+  Write-Output "Execute with an argument: ./Invoke-HunterConfirmation.ps1 -token 12345"
+} else {
+  Invoke-HunterConfirmation -token $Args[0]
+}
