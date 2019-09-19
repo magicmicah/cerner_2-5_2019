@@ -30,3 +30,7 @@ Start-LoadTest -url "http://google.com" -iterations 5 -silent
 I had a need to search through several property files to audit a setting. Find-Property is built so that it will return content of all the files within a directory and return those results back.
 
 Find-Property -directory C:\temp\files -property property.name
+
+### 4. Get-Productive
+
+I was thinking about what is the spirit of engineering productivity and that often comes down to focus. The pomodoro technique is a time management system that encourages you to work with the time you have. Get-Productive asks you "How many minutes do you want to be productive?" and then with the right input it goes into the background and you can "get productive". For a little fun, I added an array of motivational/productive quotes that will print every five minutes and remind you how many minutes have gone by so far. When the timer completes, a pop up window comes up wishing your time was well spent. 
