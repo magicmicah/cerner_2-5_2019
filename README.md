@@ -34,3 +34,11 @@ Find-Property -directory C:\temp\files -property property.name
 ### 4. Get-Productive
 
 I was thinking about what is the spirit of engineering productivity and that often comes down to focus. The pomodoro technique is a time management system that encourages you to work with the time you have. Get-Productive asks you "How many minutes do you want to be productive?" and then with the right input it goes into the background and you can "get productive". For a little fun, I added an array of motivational/productive quotes that will print every five minutes and remind you how many minutes have gone by so far. When the timer completes, a pop up window comes up wishing your time was well spent. 
+
+### 5. cerner.c
+
+Sometimes to be more productive, you need to step back and have a little fun. I follow a subreddit called ProgrammerHumor. It's fun to be able to see what other programmers see on a daily basis while keeping their sense of humor. One post in particular had me chuckling and I thought this would be a good contribution for obsfucated code. 
+
+https://www.reddit.com/r/ProgrammerHumor/comments/d7up1h/a_friend_started_programming_in_c_and_sent_me/
+
+That's how cerner.c was born. It's functional, executes, does nothing except remind you that just because you can, doesn't mean you should. 
