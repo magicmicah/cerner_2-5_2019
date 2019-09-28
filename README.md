@@ -46,3 +46,11 @@ That's how cerner.c was born. It's functional, executes, does nothing except rem
 ### 6. jiraQuery.ps1
 
 This is a hack I put together to query jira based on any JQL you give it. It uses pagination to gather the total results returned and then uses a while loop to ensure all items are returned. Basic output of this script will Write-Output of the jira key, summary and assignee. There are thousands of more fields that could be uses to gather data and I intend to do that. It is not a function, so a username/password has to be inserted into the script, as well as the jira server and JQL query. Not ideal but for getting the basic logic done for what I intend to do with it, I'm pretty happy. 
+
+### 7. Add-UserToLocalGroup
+
+When managing users, you sometimes need to add them to a local group on servers you own. This function is meant to be iterative over a group of servers but can be used with one server. Invoke it like so:
+
+Add-UserToLocalGroup -server SERVER -user USERNAME -domain DOMAIN -group GROUP
+
+Special note: You need to be an administrator over the servers you are adding them to. :)
