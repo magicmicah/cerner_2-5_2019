@@ -54,3 +54,15 @@ When managing users, you sometimes need to add them to a local group on servers 
 Add-UserToLocalGroup -server SERVER -user USERNAME -domain DOMAIN -group GROUP
 
 Special note: You need to be an administrator over the servers you are adding them to. :)
+
+### 8. Invoke-Download
+It's been a busy month and I have not made as many submissions as I would like. Noticing this, I went back into my list of scripts and found this gem. Invoke-Download is useful for when you need some catch exceptions and verification around downloading files. For example, below will download a remote file to local C:\temp directory:
+
+Invoke-Download -Uri "http://ipv4.download.thinkbroadband.com/1MB.zip" -OutFile C:\temp\file.zip
+
+By default there is no output, maybe I need one but it's not necessary. When I add a -Verify flag, I am returned a SHA256 hash of the downloaded file:
+
+Invoke-Download -Uri "http://ipv4.download.thinkbroadband.com/1MB.zip" -OutFile C:\temp\file.zip -Verify SHA256
+9F88DCF33BB76FF0A410B5A44EE962A1E99FA45B3AC849E28F68D935A4E7B618
+
+This is extremely useful if I need to verify against a known hash. I can use all the available verifications that Get-FileHash supports to get a different hash. 
