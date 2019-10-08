@@ -66,3 +66,11 @@ Invoke-Download -Uri "http://ipv4.download.thinkbroadband.com/1MB.zip" -OutFile 
 9F88DCF33BB76FF0A410B5A44EE962A1E99FA45B3AC849E28F68D935A4E7B618
 
 This is extremely useful if I need to verify against a known hash. I can use all the available verifications that Get-FileHash supports to get a different hash. 
+
+### 9. Restart-Device
+
+On occasion, my Cerner device will have issues with changing the brightness. While the UI shows the slider changing with the brightness, the brightness level stays the same. Researching the issue, I did not find a fix from Dell, however a workaround that I could script with PowerShell. I decided to make it functional for any device so anything could be restarted with it like so:
+
+Restart-Device -deviceName "Intel(R) UHD Graphics 630"
+
+What this will do is use Disable-PnpDevice and Enable-PnpDevice to essentially restart the device given from input. I surely could use some better error handling with this, but it works until I can find the right fix for the brightness keys. 
